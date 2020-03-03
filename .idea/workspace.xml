@@ -130,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images/products" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -138,6 +138,7 @@
       <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\LaraEcommerce\public\images\products" />
       <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\layouts" />
     </key>
   </component>
@@ -157,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583126664928</updated>
-      <workItem from="1583126674148" duration="14651000" />
+      <workItem from="1583126674148" duration="22932000" />
     </task>
     <servers />
   </component>
