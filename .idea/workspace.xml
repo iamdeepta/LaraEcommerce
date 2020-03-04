@@ -119,6 +119,10 @@
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YYjwtKLZnd1SUUg5gexWMGQPPY" />
@@ -161,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1583126664928</updated>
       <workItem from="1583126674148" duration="28837000" />
-      <workItem from="1583293661007" duration="17148000" />
+      <workItem from="1583293661007" duration="20438000" />
     </task>
     <servers />
   </component>

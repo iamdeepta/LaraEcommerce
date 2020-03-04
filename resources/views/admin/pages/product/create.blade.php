@@ -8,7 +8,7 @@
                     Add Product
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.product.store') }}" method="post">
+                    <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">   {{--enctype for image insert purpose--}}
                         {{ csrf_field() }}     {{--generates hidden token--}}
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
@@ -28,6 +28,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Quantity</label>
                             <input type="number" class="form-control" name="quantity" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter quantity">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product_image">Product Image</label>
+                            <input type="file" class="form-control" name="product_image" id="product_image" >
 
                         </div>
 

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\ProductImage;
 use Illuminate\Http\Request;
 
 use App\Product;
+
+use Image;
 
 class AdminPagesController extends Controller
 {
@@ -28,6 +31,20 @@ class AdminPagesController extends Controller
         $product->admin_id = 1;
 
         $product->save();   // to store into database
+
+        //ProductImage Model insert image
+        if ($request->hasFile('product_image')){
+            //insert that image
+            $image = $request->file('product_image');
+            $img = time(). '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/products/' .$img);
+            Image::make($image)->save($location);
+
+            $product_image = new ProductImage;
+            $product_image->product_id = $product->id;
+            $product_image->image = $img;
+            $product_image->save();
+        }
 
         return redirect()->route('admin.product.create');
     }
