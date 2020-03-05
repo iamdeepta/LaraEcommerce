@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <title>LaraEcommerce</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/iconfonts/ionicons/css/ionicons.css')}}">
@@ -28,9 +28,9 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html">
+            <a class="navbar-brand brand-logo" href="{{route('admin.index')}}">
                 <img src="{{asset('images/logo.svg')}}" alt="logo" /> </a>
-            <a class="navbar-brand brand-logo-mini" href="index.html">
+            <a class="navbar-brand brand-logo-mini" href="{{route('admin.index')}}">
                 <img src="{{asset('images/logo-mini.svg')}}" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -192,7 +192,7 @@
                 </li>
                 <li class="nav-item nav-category">Main Menu</li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{ route('admin.index') }}">
                         <i class="menu-icon typcn typcn-document-text"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
@@ -200,20 +200,25 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <i class="menu-icon typcn typcn-coffee"></i>
-                        <span class="menu-title">Basic UI Elements</span>
+                        <span class="menu-title">Products</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                                <a class="nav-link" href="{{ route('admin.products') }}">Manage Products</a>
+
                             </li>
                             <li class="nav-item">
+
+                                <a class="nav-link" href="{{ route('admin.product.create') }}">Create Product</a>
+                            </li>
+                            {{--<li class="nav-item">
                                 <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                            </li>
+                            </li>--}}
                         </ul>
                     </div>
                 </li>
