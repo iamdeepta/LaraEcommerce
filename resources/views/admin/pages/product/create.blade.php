@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <form action="{{ route('admin.product.store') }}" method="post" enctype="multipart/form-data">   {{--enctype for image insert purpose--}}
                         {{ csrf_field() }}     {{--generates hidden token--}}
+                        @include('admin.partials.messages')
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
                             <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
@@ -33,7 +34,23 @@
 
                         <div class="form-group">
                             <label for="product_image">Product Image</label>
-                            <input type="file" class="form-control" name="product_image" id="product_image" >
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
+                                </div>
+                            </div>
 
                         </div>
 

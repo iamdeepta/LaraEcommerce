@@ -20,6 +20,16 @@ class AdminPagesController extends Controller
     }
 
     public function product_store(Request $request){
+
+        $request->validate([
+            'title' => 'required|max:150',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'quantity' => 'required|numeric',
+
+        ]);
+
+
         $product = new Product;
         $product->title = $request->title;
         $product->description = $request->description;
@@ -33,7 +43,7 @@ class AdminPagesController extends Controller
         $product->save();   // to store into database
 
         //ProductImage Model insert image
-        if ($request->hasFile('product_image')){
+        /*if ($request->hasFile('product_image')){
             //insert that image
             $image = $request->file('product_image');
             $img = time(). '.' . $image->getClientOriginalExtension();
@@ -44,6 +54,22 @@ class AdminPagesController extends Controller
             $product_image->product_id = $product->id;
             $product_image->image = $img;
             $product_image->save();
+        }*/
+        if (count($request->product_image) > 0){
+            foreach ($request->product_image as $image){
+                if ($request->hasFile('product_image')){
+                    //insert that image
+                    //$image = $request->file('product_image');
+                    $img = time(). '.' . $image->getClientOriginalExtension();
+                    $location = public_path('images/products/' .$img);
+                    Image::make($image)->save($location);
+
+                    $product_image = new ProductImage;
+                    $product_image->product_id = $product->id;
+                    $product_image->image = $img;
+                    $product_image->save();
+                }
+            }
         }
 
         return redirect()->route('admin.product.create');

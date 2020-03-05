@@ -270,6 +270,7 @@
             </ul>
         </nav>
         <!-- partial -->
+
         @yield('content')
     </div>
     <!-- page-body-wrapper ends -->
