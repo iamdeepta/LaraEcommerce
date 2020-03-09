@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('backend.layouts.master')
 @section('content')
     <div class="main-panel">
         <div class="content-wrapper">
@@ -8,7 +8,7 @@
                     Manage Product
                 </div>
                 <div class="card-body">
-                    @include('admin.partials.messages')
+                    @include('backend.partials.messages')
                     <table class="table table-hover table-striped">
                         <tr>
                             <th>#</th>
@@ -24,7 +24,7 @@
                             <td>{{ $product->title }}</td>
                             <td>{{ $product->price }}</td>
                             <td>{{ $product->quantity }}</td>
-                            <td><a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-success">Edit</a>
+                            <td><a href="{{ route('backend.product.edit', $product->id) }}" class="btn btn-success">Edit</a>
                                 <a href="#deleteModal{{ $product->id }}" data-toggle="modal" class="btn btn-danger">Delete</a>
 
                                 <!--Delete Modal -->
@@ -41,7 +41,7 @@
 
                                             </div>--}}
                                             <div class="modal-footer">
-                                                <form action="{!! route('admin.product.delete', $product->id) !!}" method="post">
+                                                <form action="{!! route('backend.product.delete', $product->id) !!}" method="post">
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-danger" >Yes</button>
                                                 </form>

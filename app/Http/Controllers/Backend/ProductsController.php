@@ -1,29 +1,32 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
-use App\ProductImage;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;    //to access AdminController.php
 
-use App\Product;
+use App\Models\ProductImage;
+
+
+use App\Models\Product;
 
 use Image;
 
-class AdminProductController extends Controller
+class ProductsController extends Controller
 {
     public function index(){
         $products = Product::orderBy('id', 'desc')->get();
-        return view('admin.pages.product.index')->with('products', $products);
+        return view('backend.pages.product.index')->with('products', $products);
     }
 
     public function create(){
-        return view('admin.pages.product.create');
+        return view('backend.pages.product.create');
     }
 
 
     public function edit($id){
         $product = Product::find($id);     // find for getting particular product of that particular id
-        return view('admin.pages.product.edit')->with('product', $product);
+        return view('backend.pages.product.edit')->with('product', $product);
     }
 
     public function store(Request $request){
@@ -79,7 +82,7 @@ class AdminProductController extends Controller
             }
         }
 
-        return redirect()->route('admin.product.create');
+        return redirect()->route('backend.product.create');
     }
 
     public function update(Request $request, $id){
@@ -102,7 +105,7 @@ class AdminProductController extends Controller
 
         $product->save();   // to store into database
 
-        return redirect()->route('admin.products');
+        return redirect()->route('backend.products');
     }
 
     public function delete($id){

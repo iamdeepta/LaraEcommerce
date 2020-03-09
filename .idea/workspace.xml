@@ -139,14 +139,17 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\frontend" />
+      <recent name="F:\xampp\htdocs\LaraEcommerce\app\Models" />
+      <recent name="F:\xampp\htdocs\LaraEcommerce\app\Http\Controllers\Frontend" />
+      <recent name="F:\xampp\htdocs\LaraEcommerce\app\Http\Controllers\Backend" />
+      <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\admin\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\xampp\htdocs\LaraEcommerce\app\Http\Controllers" />
       <recent name="F:\xampp\htdocs\LaraEcommerce\public\images\products" />
       <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\admin\pages" />
-      <recent name="F:\xampp\htdocs\LaraEcommerce\resources\views\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -167,6 +170,7 @@
       <updated>1583126664928</updated>
       <workItem from="1583126674148" duration="28837000" />
       <workItem from="1583293661007" duration="41558000" />
+      <workItem from="1583724612969" duration="8388000" />
     </task>
     <servers />
   </component>
@@ -178,14 +182,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1583129674634" />
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583728196082">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1583728196082" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583727371513">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583727371513" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1583126828740">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583126828740" />
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1583293673461">
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1583724713902">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583293673461" />
+    <state x="384" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583724713902" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1583126877735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

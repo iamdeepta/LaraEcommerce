@@ -28,9 +28,9 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-            <a class="navbar-brand brand-logo" href="{{route('admin.index')}}">
+            <a class="navbar-brand brand-logo" href="{{route('backend.index')}}">
                 <img src="{{asset('images/logo.svg')}}" alt="logo" /> </a>
-            <a class="navbar-brand brand-logo-mini" href="{{route('admin.index')}}">
+            <a class="navbar-brand brand-logo-mini" href="{{route('backend.index')}}">
                 <img src="{{asset('images/logo-mini.svg')}}" alt="logo" /> </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -192,7 +192,7 @@
                 </li>
                 <li class="nav-item nav-category">Main Menu</li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.index') }}">
+                    <a class="nav-link" href="{{ route('backend.index') }}">
                         <i class="menu-icon typcn typcn-document-text"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
@@ -206,12 +206,12 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.products') }}">Manage Products</a>
+                                <a class="nav-link" href="{{ route('backend.products') }}">Manage Products</a>
 
                             </li>
                             <li class="nav-item">
 
-                                <a class="nav-link" href="{{ route('admin.product.create') }}">Create Product</a>
+                                <a class="nav-link" href="{{ route('backend.product.create') }}">Create Product</a>
                             </li>
                             {{--<li class="nav-item">
                                 <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>

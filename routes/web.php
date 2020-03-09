@@ -11,26 +11,29 @@
 |
 */
 
-Route::get('/', 'PagesController@index')->name('index');   /*name is for applying a name to the route*/
-Route::get('/contact', 'PagesController@contact')->name('contact');
-Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/', 'Frontend\PagesController@index')->name('index');   /*name is for applying a name to the route*/
+Route::get('/contact', 'Frontend\PagesController@contact')->name('contact');
+
+//Product Routes
+Route::get('/products', 'Frontend\ProductsController@index')->name('products');
+Route::get('/product/{slug}', 'Frontend\ProductsController@show')->name('products.show');
 
 //Admin Routes
-Route::group(['prefix' => 'admin'], function (){
+Route::group(['prefix' => 'backend'], function (){
 
-    Route::get('/', 'AdminPagesController@index')->name('admin.index');
+    Route::get('/', 'Backend\PagesController@index')->name('backend.index');
 
 
     //Product Routes
     Route::group(['prefix' => '/products'], function (){
 
 
-        Route::get('/create', 'AdminProductController@create')->name('admin.product.create');
-        Route::get('/edit/{id}', 'AdminProductController@edit')->name('admin.product.edit');
-        Route::get('/', 'AdminProductController@index')->name('admin.products');
-        Route::post('/store', 'AdminProductController@store')->name('admin.product.store');
-        Route::post('/update/{id}', 'AdminProductController@update')->name('admin.product.update');
-        Route::post('/delete/{id}', 'AdminProductController@delete')->name('admin.product.delete');
+        Route::get('/create', 'Backend\ProductsController@create')->name('backend.product.create');
+        Route::get('/edit/{id}', 'Backend\ProductsController@edit')->name('backend.product.edit');
+        Route::get('/', 'Backend\ProductsController@index')->name('backend.products');
+        Route::post('/store', 'Backend\ProductsController@store')->name('backend.product.store');
+        Route::post('/update/{id}', 'Backend\ProductsController@update')->name('backend.product.update');
+        Route::post('/delete/{id}', 'Backend\ProductsController@delete')->name('backend.product.delete');
     });
 
 });

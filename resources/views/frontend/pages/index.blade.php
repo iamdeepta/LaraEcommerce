@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('frontend.layouts.master')
 
 @section('content')
 {{--    Sidebar + Content Start--}}
@@ -6,7 +6,7 @@
 <div class="container margin-top-20">
     <div class="row">
         <div class="col-md-4">
-            @include('partials.product-sidebar')
+            @include('frontend.partials.product-sidebar')
         </div>
         <div class="col-md-8">
             <div class="widget">
