@@ -27,13 +27,23 @@ Route::group(['prefix' => 'backend'], function (){
     //Product Routes
     Route::group(['prefix' => '/products'], function (){
 
-
+        Route::get('/', 'Backend\ProductsController@index')->name('backend.products');
         Route::get('/create', 'Backend\ProductsController@create')->name('backend.product.create');
         Route::get('/edit/{id}', 'Backend\ProductsController@edit')->name('backend.product.edit');
-        Route::get('/', 'Backend\ProductsController@index')->name('backend.products');
         Route::post('/store', 'Backend\ProductsController@store')->name('backend.product.store');
         Route::post('/update/{id}', 'Backend\ProductsController@update')->name('backend.product.update');
         Route::post('/delete/{id}', 'Backend\ProductsController@delete')->name('backend.product.delete');
+    });
+
+    //Category Routes
+    Route::group(['prefix' => '/categories'], function (){
+
+        Route::get('/', 'Backend\CategoriesController@index')->name('backend.categories');
+        Route::get('/create', 'Backend\CategoriesController@create')->name('backend.category.create');
+        Route::get('/edit/{id}', 'Backend\CategoriesController@edit')->name('backend.category.edit');
+        Route::post('/store', 'Backend\CategoriesController@store')->name('backend.category.store');
+        Route::post('/category/update/{id}', 'Backend\CategoriesController@update')->name('backend.category.update');
+        Route::post('/category/delete/{id}', 'Backend\CategoriesController@delete')->name('backend.category.delete');
     });
 
 });
