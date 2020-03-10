@@ -5,15 +5,15 @@
 
             <div class="card">
                 <div class="card-header">
-                    Add Product
+                    Add Category
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('backend.product.store') }}" method="post" enctype="multipart/form-data">   {{--enctype for image insert purpose--}}
-                        {{ csrf_field() }}     {{--generates hidden token--}}
+                    <form action="{{ route('backend.category.store') }}" method="post" enctype="multipart/form-data">   {{--enctype for image insert purpose--}}
+                        @csrf     {{--generates hidden token--}}
                         @include('backend.partials.messages')
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" name="title" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category Name">
 
                         </div>
                         <div class="form-group">
@@ -22,35 +22,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Price</label>
-                            <input type="number" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter price">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Quantity</label>
-                            <input type="number" class="form-control" name="quantity" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter quantity">
-
+                            <label for="exampleInputPassword1">Parent Category</label>
+                            <select class="form-control" name="parent_id" >
+                                @foreach($main_categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
 
+
                         <div class="form-group">
-                            <label for="product_image">Product Image</label>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="file" class="form-control" name="product_image[]" id="product_image" >
-                                </div>
-                            </div>
+                            <label for="image">Category Image</label>
+
+                            <input type="file" class="form-control" name="image" id="image" >
 
                         </div>
 

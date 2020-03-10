@@ -9,7 +9,7 @@
                 </div>
                 <div class="card-body">
                     <form action="{{ route('backend.product.store') }}" method="post" enctype="multipart/form-data">   {{--enctype for image insert purpose--}}
-                        {{ csrf_field() }}     {{--generates hidden token--}}
+                        @csrf     {{--generates hidden token--}}
                         @include('backend.partials.messages')
                         <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>

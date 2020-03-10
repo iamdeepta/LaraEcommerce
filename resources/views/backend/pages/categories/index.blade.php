@@ -13,6 +13,7 @@
                         <tr>
                             <th>#</th>
                             <th>Category Name</th>
+                            <th>Category Image</th>
                             <th>Parent Category</th>
                             <th>Action</th>
                         </tr>
@@ -21,6 +22,16 @@
                         <tr>
                             <td>#</td>
                             <td>{{ $category->name }}</td>
+                            <td>
+                                <img src="{!! asset('images/categories/'.$category->image) !!}" width="100px">
+                            </td>
+                            <td>
+                                @if($category->parent_id==NULL)
+                                    Primary Category
+                                    @else
+                                    {{ $category->parent->name }}
+                                    @endif
+                            </td>
 
                             <td><a href="{{ route('backend.product.edit', $category->id) }}" class="btn btn-success">Edit</a>
                                 <a href="#deleteModal{{ $category->id }}" data-toggle="modal" class="btn btn-danger">Delete</a>
